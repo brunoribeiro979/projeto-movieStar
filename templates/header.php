@@ -47,7 +47,7 @@ $userData = $userDao->verifyToken(false);
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="togglenavigation">
                 <i class="fas fa-bars"></i>
             </button>
-            <form action="" method="get" id="search-form" class="form-inline my-2 my-lg-0">
+            <form action="<?= $BASE_URL ?>search.php" method="get" id="search-form" class="form-inline my-2 my-lg-0">
                 <input type="text" name="q" id="search" class="form-control mr-sm-2" type="search" placeholder="Buscar Filmes" aria-label="search">
                 <button type="submit" class="btn my-2 my-sm-0">
                     <i class="fas fa-search"></i>
@@ -58,9 +58,10 @@ $userData = $userDao->verifyToken(false);
                     <?php if ($userData) : ?>
                         <li class="nav-item">
                             <a href="<?= $BASE_URL ?>newmovie.php" class="nav-link">
-                                <i class="far fa-plus-square"></i>Inluir Filme
+                                <i class="far fa-plus-square"></i> Inluir Filme
                             </a>
                         </li>
+
                         <li class="nav-item">
                             <a href="<?= $BASE_URL ?>dashboard.php" class="nav-link">Meus Filmes</a>
                         </li>
